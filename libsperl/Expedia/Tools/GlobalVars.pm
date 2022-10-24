@@ -223,18 +223,18 @@ $proxyAustralia = 'https://chsxwbsectau001.idx.expedmz.com/Commission.asmx';
 
 # ______________________________________________________________
 
-$WSLogin_back  = 's-egeccemid';
+$WSLogin_back  = 'XXXXX';
 $WSLogin_front = 'BTC_TAS';
-$WSLogin_nav = 's-sqlsvc-nav'; 
+$WSLogin_nav = 'XXXXX'; 
 
 $hashWSLogin = {
-    's-egeccemid'  =>  '7LAR/MFHvO/=Z=Lc',
-    's-sqlsvc-nav' =>  'dQpa9VLEfTpszR2'
+    's-egeccemid'  =>  'xxxx',
+    's-sqlsvc-nav' =>  'xxxx'
 };
 
 $hashNavisionLogin = {
-    's-sql-ketbo'  =>  'R@bCb3510',
-    's-sql-navup'  =>  'R@bCb3512'
+    's-sql-ketbo'  =>  'xxxx',
+    's-sql-navup'  =>  'xxxx'
 };
 
 
