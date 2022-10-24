@@ -1,23 +1,13 @@
-<Config>
+<onfig>
 
   <!-- BEGIN Connections Definitions -->
 	<Connections>
 
-	    <!--
-	        <SQLServer>
-	        <dbname>mid</dbname>
-	        <database>dbi:Sybase:host=E0110002.expediacorporate.eu;port=1451:database=FrEgen_A;sendStringParametersAsUnicode=false</database>
-	        <login>MID_User</login>
-	        <password>MID_User</password>
-	        <autoconnect>1</autoconnect>
-	        </SQLServer>
-	    -->
-	    
 	    <SQLServer>
 	        <dbname>mid</dbname>
-	        <database>dbi:Sybase:host=192.168.12.88;port=1433:database=FrEgen;sendStringParametersAsUnicode=false</database>
-	        <login>MID_User</login>
-	        <password>mf5ik7n4</password>
+	        <database>dbi:Sybase:host=0.0.0.0;port=123:database=FrEgen;sendStringParametersAsUnicode=false</database>
+	        <login>XXXXX</login>
+	        <password>xxxxx</password>
 	        <autoconnect>1</autoconnect>
 	    </SQLServer>
 	  
@@ -25,11 +15,11 @@
 	    <name>amadeus</name>
 	    <signin>0001AA/SU</signin>
 	    <modifsig>BTCAIR</modifsig>
-	    <tcp>195.27.162.179</tcp>
-	    <port>20002</port>
-	    <corpoid>Egencia-Robots-POS</corpoid>
-	    <login>POSUSER</login>
-	    <password>XRE8DGML</password>
+	    <tcp>0.0.0.0</tcp>
+	    <port>123</port>
+	    <corpoid>XXXXX</corpoid>
+	    <login>xxxxx</login>
+	    <password>xxxxx</password>
       <officeid>PAREC38DD</officeid>
       <language>fr</language>
       <autoconnect>0</autoconnect>
