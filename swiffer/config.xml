@@ -1,0 +1,77 @@
+<Config>
+
+  <!-- BEGIN Connections Definitions -->
+	<Connections>
+
+	    <!--
+	        <SQLServer>
+	        <dbname>mid</dbname>
+	        <database>dbi:Sybase:host=E0110002.expediacorporate.eu;port=1451:database=FrEgen_A;sendStringParametersAsUnicode=false</database>
+	        <login>MID_User</login>
+	        <password>MID_User</password>
+	        <autoconnect>1</autoconnect>
+	        </SQLServer>
+	    -->
+	    
+	    <SQLServer>
+	        <dbname>mid</dbname>
+	        <database>dbi:Sybase:host=192.168.12.88;port=1433:database=FrEgen;sendStringParametersAsUnicode=false</database>
+	        <login>MID_User</login>
+	        <password>mf5ik7n4</password>
+	        <autoconnect>1</autoconnect>
+	    </SQLServer>
+	  
+	  <Amadeus>
+	    <name>amadeus</name>
+	    <signin>0001AA/SU</signin>
+	    <modifsig>BTCAIR</modifsig>
+	    <tcp>195.27.162.179</tcp>
+	    <port>20002</port>
+	    <corpoid>Egencia-Robots-POS</corpoid>
+	    <login>POSUSER</login>
+	    <password>XRE8DGML</password>
+      <officeid>PAREC38DD</officeid>
+      <language>fr</language>
+      <autoconnect>0</autoconnect>
+	  </Amadeus>
+
+	</Connections>
+  <!-- END Connections Definitions -->
+
+  <!-- BEGIN Tasks Definitions -->
+	<Tasks>
+
+	  <Task>
+	    <name>swiffer</name>
+	    <market>FR</market>
+	    <source>source</source>
+	    <amadeus>amadeus</amadeus>
+	  	<logFile>swiffer</logFile>
+	    <modules>
+	      <module>
+	        <name>SWI::FakeModule</name>
+	        <rank>1</rank>
+	      </module>
+	    </modules>
+	  </Task>
+
+	</Tasks>
+  <!-- END Tasks Definitions -->
+	
+  <!-- BEGIN Sources Definitions -->
+	<Sources>
+
+	  <Source>
+	    <name>source</name>
+	    <type>module</type>
+	    <modules>
+	      <module>
+	      	<name>SWI::FakeModule</name>
+	      </module>
+	    </modules>
+	  </Source>
+
+	</Sources>
+  <!-- END Sources Definitions -->
+
+</Config>

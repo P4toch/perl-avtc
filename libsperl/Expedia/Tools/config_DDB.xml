@@ -1,0 +1,46 @@
+<Config>
+
+    <!-- BEGIN Connections Definitions -->
+    <Connections>
+
+<!--
+    <SQLServer>
+            <dbname>mid</dbname>
+            <database>dbi:Sybase:host=E0110002.expediacorporate.eu;port=1451:database=FrEgen_Maui;sendStringParametersAsUnicode=false</database>
+            <login>MID_User</login>
+            <password>MID_User</password>
+            <autoconnect>1</autoconnect>
+    </SQLServer>
+
+    <SQLServer>
+        <dbname>navision</dbname>
+        <database>dbi:Sybase:host=srvpar5navt01;port=1433:database=NAV_MAUI;sendStringParametersAsUnicode=false</database>
+        <login>navupgrd</login>
+        <password>grd0_</password>
+        <autoconnect>1</autoconnect>
+    </SQLServer>
+--> 
+        
+ 
+        <SQLServer>
+            <dbname>navision</dbname>
+            <database>dbi:Sybase:host=srvpar5nav01.expediacorporate.eu;port=1433:database=NAV_PRD;sendStringParametersAsUnicode=false</database>
+            <login>MO_User</login>
+            <password>M0_USEr0_</password>
+            <autoconnect>1</autoconnect>
+        </SQLServer>
+        
+        <SQLServer>
+        <dbname>mid</dbname>
+        <database>dbi:Sybase:host=192.168.12.88;port=1433:database=FrEgen;sendStringParametersAsUnicode=false</database>
+        <login>MID_User</login>
+        <password>mf5ik7n4</password>
+        <autoconnect>1</autoconnect>
+        </SQLServer>        
+       
+      
+    </Connections>
+    
+    <!-- END Connections Definitions -->
+
+</Config>

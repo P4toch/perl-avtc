@@ -1,0 +1,17 @@
+<ECTEGetUserPaymentTypeRQ>
+  <ContextRQ>
+    <Language>[% context.language %]</Language>
+    <Application>[% context.application  %]</Application>
+    <UserAgent>[% context.userAgent %]</UserAgent>
+  </ContextRQ>
+  <Parameters>
+    <PerCode>[% perCode %]</PerCode>
+    <ComCode>[% comCode %]</ComCode>[% FOREACH be = billingEntity %]
+    <BillingEntity>
+      <Value>[% be.value %]</Value>
+      <Code>[% be.code %]</Code>	
+    </BillingEntity>[% END %]
+    <Service>[% service %]</Service>
+	<PosCode>[% posCode %]</PosCode>
+  </Parameters>
+</ECTEGetUserPaymentTypeRQ>

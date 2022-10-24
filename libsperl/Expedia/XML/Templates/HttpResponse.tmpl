@@ -1,0 +1,9 @@
+<HttpResponse>
+  <Context>
+    <Status>[% Status %]</Status>[% IF HttpErrors %][% IF HttpErrors.size > 0 %]
+    <Errors>[% FOREACH error = HttpErrors %]
+      <Error>[% error %]</Error>[% END %]
+    </Errors>[% END %][% END %]
+  </Context>
+  <Response>[% HttpResponse %]</Response>
+</HttpResponse>

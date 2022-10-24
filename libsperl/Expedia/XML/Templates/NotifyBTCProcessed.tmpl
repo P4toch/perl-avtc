@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NotifyBTCProcessed xmlns="http://www.expediacorporate.fr/newsimages/xsds/v1">
+  <Batch>[% Batch %]</Batch>
+  <MdCode>[% MdCode %]</MdCode>
+  <Status>[% Status %]</Status>
+  <Phase>
+    <Current>[% CurrentPhase %]</Current>
+    <Total>[% TotalPhase %]</Total>
+  </Phase>[% IF Reports %][% IF Reports.size > 0 %]
+  <Reports>[% FOREACH m = Reports %]
+    <Report>
+      <Code>[% m.Code %]</Code>[% IF m.PnrId %]
+      <PnrId>[% m.PnrId %]</PnrId>[% END %][% IF m.DvId %]
+      <DvId>[% m.DvId %]</DvId>[% END %][% IF m.PerCode || m.PaxNumber %]
+      <Pax>[% IF m.PerCode %]
+        <PerCode>[% m.PerCode %]</PerCode>[% END %][% IF m.PaxNumber %]
+        <PaxNumber>[% m.PaxNumber %]</PaxNumber>[% END %]
+      </Pax>[% END %]
+      <Mesg>[% m.WbmiMesg %]</Mesg>[% IF m.AmadeusMesg %]
+      <AmadeusMesg>[% m.AmadeusMesg %]</AmadeusMesg>[% END %]
+      <Date>[% m.Date %]</Date>
+    </Report>[% END %]
+  </Reports>[% END %][% END %][% IF AmadeusXmls %][% IF AmadeusXmls.size > 0 %]
+  <AmadeusXmls>[% FOREACH x = AmadeusXmls %]
+    <AmadeusXml>
+      <PnrId>[% x.PnrId %]</PnrId>
+      <PnrXml>[% x.PnrXml %]</PnrXml>
+    </AmadeusXml>[% END %]
+  </AmadeusXmls>[% END %][% END %]
+</NotifyBTCProcessed>

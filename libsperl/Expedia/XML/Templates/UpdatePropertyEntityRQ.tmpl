@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UpdatePropertyEntityRQ xmlns="http://www.expediacorporate.fr/newsimages/xsds/v1">
+  <ContextRQ>
+    <Language>[% context.language %]</Language>
+    <Application>[% context.application  %]</Application>
+    <UserAgent>[% context.userAgent %]</UserAgent>
+  </ContextRQ>
+  <Entity EntityType="[% entityType %]" EntityKey="[% entityKey %]">
+    <Properties>[% FOREACH p = properties  %]
+	  <Property name="[% p.name %]">[% IF p.isStringContent %]<IsStringContent>[% p.value %]</IsStringContent>[% ELSIF p.isDateTimeContent %]<IsDateTimeContent>[% p.value %]</IsDateTimeContent>[% ELSIF p.isBooleanContent %]<IsBooleanContent>[% p.value %]</IsBooleanContent>[% ELSIF p.isNumberContent %]<IsNumberContent>[% p.value %]</IsNumberContent>[% END %]</Property>[% END %]
+	</Properties>
+  </Entity>
+  <MessageIdentifier>[% msgId %]</MessageIdentifier>
+</UpdatePropertyEntityRQ>
